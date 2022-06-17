@@ -1,0 +1,8 @@
+{
+    "identityPoolId": "us-east-1:406cc10b-748b-4339-b7cb-12f05eafe30d",
+    "cognito_region": "us-east-1" ,
+    "user_pools_id" : "us-east-1_0eaIo7nAo",
+    "user_pools_web_client_id": "79ij9djqajo98kku2gnkc09srn",
+    "IoT_host": "a1xs29yce36m2r-ats.iot.us-east-1.amazonaws.com",
+    "IoT_endpoint": "wss://a1xs29yce36m2r-ats.iot.us-east-1.amazonaws.com/mqtt"
+}
