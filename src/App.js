@@ -36,10 +36,10 @@ const AuthStateApp = () => {
     </div>
   ) :
   (
-    <div>
-      <div>
-        app version {appVersion}
-      </div>
+    // <div>
+    //   <div>
+    //     app version {appVersion}
+    //   </div>
     <AmplifyAuthenticator>
       <AmplifySignIn
         headerText="Casa Beleza Garage Manager"
@@ -48,7 +48,7 @@ const AuthStateApp = () => {
         slot="sign-in"
       />
     </AmplifyAuthenticator>
-    </div>
+    // </div>
   );
 }
 
