@@ -13,6 +13,11 @@ function Header() {
 
     return (
         <div>
+            <div id='parent' style={{ textAlign: 'left', display: 'flex', justifyContent: 'space-between' }}>
+                <div></div>
+                <div><h3>File Submission Tool</h3></div>
+                <div></div>
+            </div>
             Casa Beleza Garage Manager
             {/* <div><Button onClick={signOut} style={{ color: '#FF5F58' }} variant='outlined'>Sign out</Button>&emsp;</div> */}
             <div></div><div><AmplifySignOut buttonText="Sign out"></AmplifySignOut></div><div></div>

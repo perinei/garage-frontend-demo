@@ -1,7 +1,7 @@
 import './App.css';
 import Amplify from 'aws-amplify'
 import React from 'react';
-import { AmplifySignIn, AmplifyAuthenticator } from '@aws-amplify/ui-react';
+import { AmplifySignIn, Authenticator } from '@aws-amplify/ui-react';
 import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 import Header from './pages/Header.jsx'
 import Main from './pages/Main.jsx'
@@ -40,14 +40,14 @@ const AuthStateApp = () => {
     //   <div>
     //     app version {appVersion}
     //   </div>
-    <AmplifyAuthenticator>
+    <Authenticator>
       <AmplifySignIn
         headerText="Casa Beleza Garage Manager"
         usernameAlias="email"
         hideSignUp="true"
         slot="sign-in"
       />
-    </AmplifyAuthenticator>
+    </Authenticator>
     // </div>
   );
 }
