@@ -135,7 +135,7 @@ function Main() {
     
             <div>&nbsp;</div>
 
-            <Button variant="contained" onClick={publish} size="large">Open/Close Garage</Button>
+            <Button variant="contained" onClick={publish} size="large">Garage Door Push Button</Button>
 
         </div >
     );
