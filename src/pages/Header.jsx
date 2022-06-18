@@ -1,13 +1,10 @@
-// import React from 'react';
+import React from 'react';
 import { Auth } from 'aws-amplify';
 import { AmplifySignOut, AmplifyAuthenticator, SignOut } from '@aws-amplify/ui-react';
 import '../App.css';
 import { Button } from "@material-ui/core";
 
-async function signOut() {
-    await Auth.signOut()
-    window.location.replace('/');
-}
+
 
 function Header() {
 
