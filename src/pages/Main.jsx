@@ -9,6 +9,15 @@ import { Button } from '@mui/material';
 import { Helmet } from "react-helmet";
 // working
 
+function ColorGreen({children}) {
+    return <span style={{color: 'green'}}>{children}</span>;
+  }
+
+  function ColorRed({children}) {
+    return <span style={{color: 'red'}}>{children}</span>;
+  }
+
+
 function Main() {
 
     const [garageDoorPosition, setGarageDoorPosition] = useState("unknow")
@@ -111,14 +120,19 @@ function Main() {
                 </Helmet>
             </div>
             <div>&nbsp;</div>
-            <div>Garage door is </div>
-            <div>&nbsp;</div>
-            <div><h1>{garageDoorPosition}</h1></div>
+            <div><h2>Garage door is</h2></div>
+     
+            <div>
+                <h1>
+                    {garageDoorPosition=='Closed' ? 
+                    <ColorGreen>{garageDoorPosition}</ColorGreen> : 
+                    <ColorRed>{garageDoorPosition}</ColorRed>}
+                </h1>
+            </div>
 
             {/* <Button variant="outlined" onClick={getSwithStatus} size="small">Get Garage Status</Button> */}
 
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
+    
             <div>&nbsp;</div>
 
             <Button variant="contained" onClick={publish} size="large">Open/Close Garage</Button>
