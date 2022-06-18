@@ -1,18 +1,21 @@
 import React from 'react';
-import { Auth } from 'aws-amplify';
+// import { Auth } from 'aws-amplify';
 import { AmplifySignOut, AmplifyAuthenticator, SignOut } from '@aws-amplify/ui-react';
 import '../App.css';
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
 
-
+// async function signOut() {
+//     await Auth.signOut()
+//     window.location.replace('/');
+// }
 
 function Header() {
 
     return (
         <div>
             Casa Beleza Garage Manager
-            <div><Button onClick={signOut} style={{ color: '#FF5F58' }} variant='outlined'>Sign out</Button>&emsp;</div>
-            <AmplifySignOut buttonText="Sign out"></AmplifySignOut>
+            {/* <div><Button onClick={signOut} style={{ color: '#FF5F58' }} variant='outlined'>Sign out</Button>&emsp;</div> */}
+            <div></div><div><AmplifySignOut buttonText="Sign out"></AmplifySignOut></div><div></div>
             <hr></hr>
         </div >
     );
