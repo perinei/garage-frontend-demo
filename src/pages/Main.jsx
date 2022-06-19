@@ -38,7 +38,7 @@ function Main() {
                     accessKeyId: info.accessKeyId,
                     secretAccessKey: info.secretAccessKey,
                     sessionToken: info.sessionToken,
-                    region: "us-east-1"
+                    region: process.env.REACT_APP_cognito_region
 
                 }
 
@@ -54,12 +54,6 @@ function Main() {
                     else console.log(data);           // successful response
                 });
 
-                
-                // Amplify.addPluggable(new AWSIoTProvider({
-                //     aws_pubsub_region: 'us-east-1',
-                //     aws_pubsub_endpoint: 'wss://a1xs29yce36m2r-ats.iot.us-east-1.amazonaws.com/mqtt',
-                // }));
-
                 Amplify.addPluggable(new AWSIoTProvider({
                     aws_pubsub_region: process.env.REACT_APP_cognito_region,
                     aws_pubsub_endpoint: 'wss://' + process.env.REACT_APP_IoTendpoint + '/mqtt',
@@ -71,7 +65,7 @@ function Main() {
                     close: () => console.log('Done'),
                 });
 
-                console.log("subscribed to aa")
+                console.log("subscribed")
                 PubSub.subscribe('$aws/things/garage_pi/shadow/get/accepted').subscribe({
                     next: data => messagereceivedGetStatus(data),
                     error: error => console.error(error),
